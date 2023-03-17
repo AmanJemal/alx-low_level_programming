@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * Main - print bumbers comas and spaces
+ * main - print bumbers comas and spaces
  *
  * Return: 0 is for success
  */
@@ -13,8 +13,11 @@ int main(void)
 	while (i < 10)
 	{
 		putchar(i + '0');
-		putchar(',');
-		putchar(' ');
+		if (i != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 		i++;
 	}
 	putchar('\n');
