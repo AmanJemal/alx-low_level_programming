@@ -8,17 +8,15 @@
 int main(void)
 {
 
-	int i = 0;
-	int j = 97;
+	int i;
 
-	while (i < 10)
+	for (i = 0; i < 10; i++)
 	{
 		putchar(i);
-		i++;
 	}
-	while (j < 103)
+	for (i = 97; i < 103; i++)
 	{
-		putchar(j);
+		putchar(i);
 	}
 	putchar('\n');
 	return (0);
