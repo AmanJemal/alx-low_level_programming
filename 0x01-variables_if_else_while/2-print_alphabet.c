@@ -2,7 +2,7 @@
 /**
  * main - print trhe alphabet in lowercase
  *
- * Return : 0 is for success
+ * Return: 0 is for success
  */
 int main(void)
 {
