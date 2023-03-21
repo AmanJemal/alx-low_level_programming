@@ -8,27 +8,14 @@
  * Return: type void
  */
 int _putchar(char c);
-void print_alphabet(void);
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
 void print_alphabet(void)
 {
 
-	char c = 'a';
+	char c;
 
-	while (c <= 'z')
+	for (c = 'a'; c <= 'z'; c++)
 	{
 		_putchar(c);
-		c++;
 	}
 	_putchar('\n');
 }
