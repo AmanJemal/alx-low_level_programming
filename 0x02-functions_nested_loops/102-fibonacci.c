@@ -20,7 +20,7 @@ int main(void)
 		b += a;
 	}
 	if (cntto % 2 == 1)
-		printf("%ld, ", a);
+		printf("%ld", a);
 
 	printf("\n");
 
