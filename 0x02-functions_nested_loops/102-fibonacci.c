@@ -15,9 +15,9 @@ int main(void)
 	for (cnter = 1; cnter <= (cntto / 2); cnter++)
 	{
 		printf("%li %li ", a, b);
+		printf(",");
 		a += b;
 		b += a;
-		printf(", ");
 	}
 	if (cntto % 2 == 1)
 		printf("%li", a);
