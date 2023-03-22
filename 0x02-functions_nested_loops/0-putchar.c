@@ -7,9 +7,15 @@
  */
 int main(void)
 {
+	char *c;
+	int i;
 
-	const char *text = "_putchar\n";
+	c = "_putchar";
 
-	write(STDOUT_FILENO, text, 9);
+	for (i = 0; i < 8; i++)
+	{
+		_putchar (c[i]);
+	}
+	_putchar('\n');
 	return (0);
 }
