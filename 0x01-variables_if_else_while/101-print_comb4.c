@@ -11,16 +11,16 @@ int main(void)
 	int j;
 	int k;
 
-	for (i = '0'; i <= '9'; i++) 
+	for (i = '0'; i <= '9'; i++) /*is place*/
 	{
-		for (j = (i + 1); j <= '9'; j++) 
+		for (j = (i + 1); j <= '9'; j++) /*js=100s+1*/
 		{
-			for (i = (j + 1); i <= '9'; i++) 
+			for (k = (j + 1); k <= '9'; k++) /*ks*/
 			{
 				putchar(i);
 				putchar(j);
-				putchar(i);
-				if (i != '7' || j != '8' || i != '9')
+				putchar(k);
+				if (i != '7' || j != '8' || k != '9')
 				{
 					putchar(',');
 					putchar(' ');
