@@ -1,43 +1,37 @@
 #include <stdio.h>
 
 /**
- *main - print a num pair from 00-99 but no repeats (00 01, 00 02, 00 03,...)
- *Return: Always 0 (Success)
+ * main - loop through variables a,b,c printing digits
+ *
+ * Return: print to stdout all possible different combinations of three digits
  */
-
 int main(void)
 {
-	int tens;
-	int ones;
-	int t;
-	int o;
+	int a = 0;
+	int b;
 
-	for (tens = '0'; tens <= '9'; tens++) /*print first two digit combo*/
+	while (a <= 98) /*run following while a less than or equal to 98*/
 	{
-		for (ones = '0'; ones <= '9'; ones++)
-		{
-		 	for (t = tens; t <= '9'; t++) /*print second of pair*/
+		b = a + 1; /*b is always one more than a*/
+		while (b <= 99) /*run following until b equal to 99*/
+		{	
+			putchar(a / 10 % 10 + '0');
+			putchar(a % 10 + '0');
+			putchar(' ');
+			putchar(b / 10 % 10 + '0');
+			putchar(b % 10 + '0');
+			if (a == 98 && b == 99)
 			{
-				for (o = ones + 1; o <= '9'; o++)
-				{
-					putchar(tens);
-					putchar(ones);
-					putchar(' ');
-					putchar(t);
-					putchar(o);
-
-					if (!((tens == '9' && ones == '9') &&
-					      (t == '9' && o == '9')))
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-				o = '0';
+				putchar('\n');
 			}
+			else
+			{	
+				putchar(',');
+				putchar(' ');
+			}
+			b++;
 		}
+		a++; /*increment this loop by 1*/
 	}
-	putchar('\n');
-
 	return (0);
 }
