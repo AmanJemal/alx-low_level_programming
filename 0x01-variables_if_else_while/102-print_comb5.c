@@ -12,11 +12,11 @@ int main(void)
 	int t;
 	int o;
 
-	for (i = '0'; i <= '9'; i++) /*print first two digit combo*/
+	for (i = '0'; i <= '9'; i++)
 	{
 		for (j = '0'; j <= '9'; j++)
 		{
-		 	for (t = i; t <= '9'; t++) /*print second of pair*/
+		 	for (t = i; t <= '9'; t++)
 			{
 				for (o = j + 1; o <= '9'; o++)
 				{
