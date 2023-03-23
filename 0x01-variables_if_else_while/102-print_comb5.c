@@ -14,7 +14,7 @@ int main(void)
 	{
 		b = a + 1; /*b is always one more than a*/
 		while (b <= 99) /*run following until b equal to 99*/
-		{	
+		{
 			putchar(a / 10 % 10 + '0');
 			putchar(a % 10 + '0');
 			putchar(' ');
@@ -25,7 +25,7 @@ int main(void)
 				putchar('\n');
 			}
 			else
-			{	
+			{
 				putchar(',');
 				putchar(' ');
 			}
