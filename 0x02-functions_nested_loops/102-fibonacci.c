@@ -15,7 +15,7 @@ int main(void)
 	for (cnter = 1; cnter <= (cntto / 2); cnter++)
 	{
 		printf("%ld, ", a);
-		printf("%ld, ", b);
+		printf("%ld", b);
 		a += b;
 		b += a;
 	}
