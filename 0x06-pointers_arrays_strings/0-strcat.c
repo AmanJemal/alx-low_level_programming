@@ -2,7 +2,7 @@
 
 /**
  * _strcat - a function that concatenate strings
- * @des: destination string declared as pointer of type char
+ * @dest: destination string declared as pointer of type char
  * @src: source string declared as pointer of type char
  * Return: pointer ptr
  */
