@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * factorial - A function that returns factorial of a given number
- * @n: input integer number.
- * Return: Factorial number.
-*/
+ * factorial - A function that returns the factorial of a given number.
+ * @n: input an integer number.
+ * Return: factorial of the number.
+ */
 int factorial(int n)
 {
 	if (n < 0)
