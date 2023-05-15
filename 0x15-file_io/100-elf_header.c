@@ -7,55 +7,7 @@
 #include <elf.h>
 
 /**
- * print_addr - prints the address
- * @ptr: pointer type of character.
- * Return: no return.
- */
-void print_addr(char *ptr)
-{
-	int i;
-	int begin;
-	char sys;
-
-	printf("  Entry point address:               0x");
-	sys = ptr[4] + '0';
-	if (sys == '1')
-	{
-		begin = 26;
-		printf("80");
-		i = begin;
-
-		while (i >= 22)
-		{
-			if (ptr[i] > 0)
-				printf("%x", ptr[i]);
-			else if (ptr[i] < 0)
-				printf("%x", 256 + ptr[i]);
-			i--;
-		}
-		if (ptr[7] == 6)
-			printf("00");
-	}
-	if (sys == '2')
-	{
-		begin = 26;
-		i = begin;
-
-		while (i > 23)
-		{
-			if (ptr[i] >= 0)
-				printf("%02x", ptr[i]);
-
-			else if (ptr[i] < 0)
-				printf("%02x", 256 + ptr[i]);
-			i--;
-		}
-	}
-	printf("\n");
-}
-
-/**
- * print_type - prints  the type.
+ * print_type - To prints  the type.
  * @ptr: pointer type of character.
  * Return: no return.
  */
@@ -82,6 +34,55 @@ void print_type(char *ptr)
 	else
 		printf("<unknown: %x>\n", type);
 }
+
+/**
+ * print_addr - prints the address
+ * @ptr: pointer type of character.
+ * Return: no return.
+ */
+void print_addr(char *ptr)
+{
+	int i;
+	int begin;
+	char sys;
+
+	printf("  Entry point address:               0x");
+	sys = ptr[4] + '0';
+	if (sys == '1')
+	{
+		begin = 26;
+		printf("80");
+		i = begin;
+
+		while (i >= 22)
+		{
+
+			if (ptr[i] > 0)
+				printf("%x", ptr[i]);
+			else if (ptr[i] < 0)
+				printf("%x", 256 + ptr[i]);
+			i--;
+		}
+		if (ptr[7] == 6)
+			printf("00");
+	}
+	if (sys == '2')
+	{
+		begin = 26;
+		i = begin;
+
+		while (i > 23)
+		{
+			if (ptr[i] >= 0)
+				printf("%02x", ptr[i]);
+			else if (ptr[i] < 0)
+				printf("%02x", 256 + ptr[i]);
+			i--;
+		}
+	}
+	printf("\n");
+}
+
 
 
 /**
@@ -157,9 +158,7 @@ void print_magic(char *ptr)
 		printf(" %02x", ptr[bytes]);
 		bytes++;
 	}
-
 	printf("\n");
-
 }
 
 /**
