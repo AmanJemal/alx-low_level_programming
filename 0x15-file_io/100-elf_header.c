@@ -2,9 +2,20 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
-#include <sys/stat.h>
 #include <fcntl.h>
 #include <elf.h>
+#include <sys/stat.h>
+
+
+void print_type(char *ptr);
+void print_addr(char *ptr);
+void print_osabi(char *ptr);
+void print_version(char *ptr);
+void print_data(char *ptr);
+void print_magic(char *ptr);
+void check_sys(char *ptr);
+int check_elf(char *ptr);
+int main(int argc, char *argv[]);
 
 /**
  * print_type - To prints  the type.
